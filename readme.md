@@ -6,7 +6,7 @@ A React App that keeps track of a busy fresh fish market. Inventory is constantl
 
 1.  Clone the repo:
 
-        git clone https://github.com/MatthewKelly12/catchOfTheDay
+        git clone https://github.com/MatthewKelly12/Catch_Of_The_Day_React
 
 2.  Install dependencies:
 
