@@ -1,5 +1,5 @@
 # Catch of The Day
-A React App that keeps track of a busy fresh fish market. Inventory is constantly changing so menu needs to be updated as quick as possible to keep orders correct.
+A React App that keeps track of a busy fresh fish market. Inventory is constantly changing so the menu needs to be updated as quick as possible to keep orders correct.
 
 **Note** - a tutorial from Wes Bos's React For Beginners Course covering over 5 hours of instructional React videos
 
