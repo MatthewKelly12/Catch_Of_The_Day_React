@@ -16,7 +16,7 @@ class App extends React.Component {
 		const fishes = {... this.state.fishes}
 		// ADD NEW FISH FROM AddFishForm TO THAT FISHES VARIABLE
 		fishes[`fish${Date.now()}`] = fish
-		// SET THE NEW FISHES OBJECT TO STATE
+		// SET THE NEW FISHES TO STATE
 		this.setState({fishes})
 	}
 
@@ -28,7 +28,7 @@ class App extends React.Component {
 		return (
 			<div className='catch-of-the-day'>
 				<div className='menu'>
-					<Header tagline='Fresh Seafood Market' />
+					<Header tagline='Fresh Seafood Market'/>
 				</div>
 			  	<Order/>
 				<Inventory
