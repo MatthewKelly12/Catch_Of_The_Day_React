@@ -16,6 +16,7 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
+
 		const { params } = this.props.match
 		// FIRST REINSTATE LOCAL STORAGE
 		const localStorageRef = localStorage.getItem(params.storeId)
@@ -60,6 +61,15 @@ class App extends React.Component {
 		this.setState({fishes})
 	}
 
+	deleteFish = key => {
+		// TAKE A COPY OF CURRENT STATE
+		const fishes = {...this.state.fishes}
+		// UPDATE THAT STATE
+		fishes[key] = null
+		// SET THAT TO STATE
+		this.setState({fishes})
+	}
+
 	loadSampleFishes = () => {
 		this.setState({fishes:sampleFishes})
 	}
@@ -72,6 +82,16 @@ class App extends React.Component {
 		// CALL SETSTATE TO UPDATE STATE OBJECT
 		this.setState({order})
 	}
+
+	removeFromOrder = (key) => {
+		// TAKE COPY OF EXISTING STATE
+		const order = {... this.state.order}
+		// REMOVE ITEM FROM STATE
+		delete order[key]
+		// CALL SETSTATE TO UPDATE STATE OBJECT
+		this.setState({order})
+	}
+
 
 	render () {
 		return (
@@ -95,10 +115,12 @@ class App extends React.Component {
 				<Order
 					fishes={this.state.fishes}
 					order={this.state.order}
+					removeFromOrder={this.removeFromOrder}
 				/>
 				<Inventory
 					addFish={this.addFish}
 					updateFish={this.updateFish}
+					deleteFish={this.deleteFish}
 					loadSampleFishes={this.loadSampleFishes}
 					fishes={this.state.fishes}
 				/>

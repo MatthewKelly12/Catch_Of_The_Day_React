@@ -19,7 +19,7 @@ class AddFishForm extends React.Component {
 			desc: this.descRef.value.value,
 			image: this.imageRef.value.value
 		}
-		// FUNCTION PASSED DOWN FROM App.js TO STORE FISH IN STATE
+		// addFish FUNCTION PASSED DOWN FROM App.js TO STORE FISH IN STATE
 		this.props.addFish(fish)
 		// CLEAR FORM AFTER ENTERING FISH
 		event.currentTarget.reset()
